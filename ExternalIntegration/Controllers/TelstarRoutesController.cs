@@ -18,13 +18,13 @@ namespace ExternalIntegration.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<TelstarRoutes> Get() 
+        public TelstarRoutes Get([FromBody] TelstarRequest telstarRequest) 
         {
-            var rng = new Random();
-            return Enumerable.Range(0, 4).Select(index => new TelstarRoutes {
-                Price = 20,
-                Time = 20
-            }).ToArray();
+            return new TelstarRoutes {
+                Price = 3,
+                Time = 20,
+                Error = "NO_ERROR"
+            };
         }
     }
 }
