@@ -1,3 +1,4 @@
+using ExternalIntegration.Enums;
 using System;
 
 namespace ExternalIntegration
